@@ -31,11 +31,14 @@ const Header: React.FC = () => {
           </Link>
         </div>
         <div id="btns" className="flex gap-4">
-          <button className="border border-stone-200 p-1.5 rounded-lg hover:bg-stone-100 cursor-pointer">
+          <button
+            className="border border-stone-200 p-1.5 rounded-lg hover:bg-stone-200 cursor-pointer"
+            id="dark-mode-btn"
+          >
             <DarkModeIcon />
           </button>
           <button
-            className="md:hidden border border-stone-200 p-1.5 rounded-lg hover:bg-stone-100 cursor-pointer"
+            className="md:hidden border border-stone-200 p-1.5 rounded-lg hover:bg-stone-200 cursor-pointer"
             onClick={() => setOpen((prev) => !prev)}
           >
             {isOpen ? <CloseIcon /> : <MenuIcon />}
@@ -45,14 +48,14 @@ const Header: React.FC = () => {
       {isOpen && (
         <div
           id="sidebar"
-          className={`fixed top-0 left-0 h-fit w-full backdrop:blur-2xl bg-white text-black transform transition-transform duration-300 p-2 md:hidden mt-20 ${
+          className={`fixed top-0 left-0 h-full w-full backdrop:blur-2xl bg-white transform transition-transform duration-300 p-2 md:hidden mt-20 ${
             isOpen ? "translate-y-0" : "translate-y-full"
           }`}
         >
           <div id="links" className="flex flex-col items-start justify-center">
             <Link
               to="#"
-              className="px-4 py-2 w-full hover:bg-stone-100 rounded-lg flex flex-row justify-between"
+              className="px-4 py-2 w-full hover:bg-stone-200 rounded-lg flex flex-row justify-between"
             >
               Features
               <span>
@@ -61,7 +64,7 @@ const Header: React.FC = () => {
             </Link>
             <Link
               to="#"
-              className="px-4 py-2 w-full hover:bg-stone-100 rounded-lg flex flex-row justify-between"
+              className="px-4 py-2 w-full hover:bg-stone-200 rounded-lg flex flex-row justify-between"
             >
               About Us
               <span>
@@ -70,7 +73,7 @@ const Header: React.FC = () => {
             </Link>
             <Link
               to="#"
-              className="px-4 py-2 w-full hover:bg-stone-100 rounded-lg flex flex-row justify-between"
+              className="px-4 py-2 w-full hover:bg-stone-200 rounded-lg flex flex-row justify-between"
             >
               Feedback
               <span>
@@ -79,9 +82,27 @@ const Header: React.FC = () => {
             </Link>
             <Link
               to="#"
-              className="px-4 py-2 w-full hover:bg-stone-100 rounded-lg flex flex-row justify-between"
+              className="px-4 py-2 w-full hover:bg-stone-200 rounded-lg flex flex-row justify-between"
             >
               How to Use ?
+              <span>
+                <ArrowOutwardIcon />
+              </span>
+            </Link>
+            <Link
+              to="#"
+              className="px-4 py-2 w-full hover:bg-stone-200 rounded-lg flex flex-row justify-between"
+            >
+              Profile
+              <span>
+                <ArrowOutwardIcon />
+              </span>
+            </Link>
+            <Link
+              to="#"
+              className="px-4 py-2 w-full hover:bg-stone-200 rounded-lg flex flex-row justify-between"
+            >
+              Login/SignUp
               <span>
                 <ArrowOutwardIcon />
               </span>
