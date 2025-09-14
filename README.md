@@ -1,69 +1,59 @@
-# React + TypeScript + Vite
+# Shrio — URL Shortener
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**[Shrio](www.google.com)** is a fast, secure, and reliable URL shortener designed to make sharing links simple and effective. It allows users to convert long, complex URLs into short, trackable, and customizable links.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1.  Instant Shortening: Convert long links into short, clean URLs in seconds.
 
-## Expanding the ESLint configuration
+2. Custom Aliases: Personalize your links with custom endings for better recall and branding.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+3. Basic Analytics: Track total clicks, creation date, and last accessed time.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+4. User Accounts: Secure login and link management through Firebase Authentication.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+5. Database Storage: All links and analytics data are stored securely in MongoDB.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## How It Works
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Paste your long link into the input field.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Customize the short URL or generate one automatically.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Copy the short link.
+
+- Share your link anywhere and monitor performance from your dashboard.
+
+## Who Can Use SmartLink
+
+- Students and Professionals: Share resumes, project links, and portfolios in a professional way.
+
+- Marketers: Run campaigns with trackable links for accurate performance insights.
+
+- Businesses: Use branded and trackable links across social media, emails, and advertisements.
+
+- Developers: Access the API to integrate link shortening directly into applications and workflows.
+
+---
+
+### Example of Shrio
+
+Your URL :
+https://shop.com/category/electronics/laptops/brand?ref=ads&utm_campaign=spring
+
+Shortened URL :
+https://yourdomain.com/spring-sale
+
+---
+
+## Future Enhancements
+
+- Expiring links with time or click limits
+
+- Password-protected links for private sharing
+
+- Advanced analytics (geolocation, device type, referrer data)
+
+- Branded domains for organizations
+
+- Team collaboration with role-based access
